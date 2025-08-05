@@ -1,0 +1,85 @@
+# Arquivos do sistema
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Arquivos de IDE/Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Logs
+*.log
+logs/
+error_log
+access_log
+
+# Arquivos temporários
+*.tmp
+*.temp
+*.cache
+
+# Arquivos de configuração local
+config.local.php
+.env
+.env.local
+
+# Arquivos de backup
+*.bak
+*.backup
+*.old
+
+# Arquivos de cache do navegador
+.cache/
+cache/
+
+# Arquivos de upload
+uploads/
+temp/
+
+# Arquivos de sessão PHP
+sessions/
+
+# Arquivos de banco de dados
+*.sql
+*.db
+*.sqlite
+
+# Arquivos de certificados
+*.pem
+*.key
+*.crt
+
+# Arquivos de configuração do Icecast
+icecast.xml
+icecast.log
+
+# Arquivos do RadioDJ
+RadioDJ/
+NowPlaying.txt
+
+# Arquivos de build
+dist/
+build/
+node_modules/
+
+# Arquivos de teste
+test/
+tests/
+*.test.js
+*.spec.js
+
+# Arquivos de documentação temporários
+docs/temp/
+*.md.bak
+
+# Arquivos de configuração do XAMPP
+xampp/
+apache/
+mysql/
+
+# Arquivos de configuração do servidor
+.htaccess.bak
+httpd.conf 
