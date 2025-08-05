@@ -1,0 +1,71 @@
+{
+  "name": "Toca Rock - Rádio Online",
+  "short_name": "Toca Rock",
+  "description": "Rádio online especializada em rock clássico dos anos 70, 80 e 90",
+  "start_url": "/tocarock/",
+  "display": "standalone",
+  "background_color": "#0a0a0a",
+  "theme_color": "#ff0000",
+  "orientation": "portrait-primary",
+  "scope": "/tocarock/",
+  "lang": "pt-BR",
+  "categories": ["music", "entertainment"],
+  "icons": [
+    {
+      "src": "assets/logo.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "assets/logo.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "assets/logo.png",
+      "sizes": "72x72",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/logo.png",
+      "sizes": "96x96",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/logo.png",
+      "sizes": "128x128",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/logo.png",
+      "sizes": "144x144",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/logo.png",
+      "sizes": "152x152",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/logo.png",
+      "sizes": "384x384",
+      "type": "image/png"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Tocar Rádio",
+      "short_name": "Play",
+      "description": "Iniciar reprodução da rádio",
+      "url": "/tocarock/?action=play",
+      "icons": [
+        {
+          "src": "assets/logo.png",
+          "sizes": "96x96"
+        }
+      ]
+    }
+  ]
+} 
