@@ -1,12 +1,12 @@
 const CACHE_NAME = 'toca-rock-v1.0.0';
 const urlsToCache = [
-  '/tocarock/',
-  '/tocarock/index.php',
-  '/tocarock/css/style.css',
-  '/tocarock/js/script.js',
-  '/tocarock/assets/logo.png',
-  '/tocarock/api/nowplaying.php',
-  '/tocarock/api/status.php',
+  '/',
+  '/index.php',
+  '/css/style.css',
+  '/js/script.js',
+  '/assets/logo.png',
+  '/api/nowplaying.php',
+  '/api/status.php',
   'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css',
   'https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;600;700&display=swap'
 ];
@@ -70,10 +70,10 @@ self.addEventListener('fetch', (event) => {
             return response;
           })
           .catch(() => {
-            // Fallback para páginas offline
-            if (event.request.destination === 'document') {
-              return caches.match('/tocarock/');
-            }
+                      // Fallback para páginas offline
+          if (event.request.destination === 'document') {
+            return caches.match('/');
+          }
           });
       })
   );
@@ -88,15 +88,15 @@ self.addEventListener('sync', (event) => {
 
 // Função para sincronização em background
 function doBackgroundSync() {
-  return fetch('/tocarock/api/nowplaying.php')
+  return fetch('/api/nowplaying.php')
     .then((response) => response.json())
     .then((data) => {
       // Envia notificação se houver nova música
       if (data.success && data.track) {
         self.registration.showNotification('Toca Rock', {
           body: `Tocando agora: ${data.track}`,
-          icon: '/tocarock/assets/logo.png',
-          badge: '/tocarock/assets/logo.png',
+          icon: '/assets/logo.png',
+          badge: '/assets/logo.png',
           tag: 'now-playing',
           requireInteraction: false,
           silent: true
@@ -112,8 +112,8 @@ function doBackgroundSync() {
 self.addEventListener('push', (event) => {
   const options = {
     body: event.data ? event.data.text() : 'Nova música no Toca Rock!',
-    icon: '/tocarock/assets/logo.png',
-    badge: '/tocarock/assets/logo.png',
+    icon: '/assets/logo.png',
+    badge: '/assets/logo.png',
     vibrate: [100, 50, 100],
     data: {
       dateOfArrival: Date.now(),
@@ -123,12 +123,12 @@ self.addEventListener('push', (event) => {
       {
         action: 'play',
         title: 'Tocar',
-        icon: '/tocarock/assets/logo.png'
+        icon: '/assets/logo.png'
       },
       {
         action: 'close',
         title: 'Fechar',
-        icon: '/tocarock/assets/logo.png'
+        icon: '/assets/logo.png'
       }
     ]
   };
@@ -144,14 +144,14 @@ self.addEventListener('notificationclick', (event) => {
 
   if (event.action === 'play') {
     event.waitUntil(
-      clients.openWindow('/tocarock/')
+      clients.openWindow('/')
     );
   } else if (event.action === 'close') {
     // Apenas fecha a notificação
   } else {
     // Clique na notificação principal
     event.waitUntil(
-      clients.openWindow('/tocarock/')
+      clients.openWindow('/')
     );
   }
 }); 

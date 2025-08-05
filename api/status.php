@@ -13,7 +13,7 @@ header('Content-Type: application/json; charset=utf-8');
 header('Access-Control-Allow-Origin: *');
 header('Cache-Control: no-cache, must-revalidate');
 
-$icecastUrl = 'http://localhost:8000/status-json.xsl';
+$icecastUrl = 'https://stream.tocarock.com.br/status-json.xsl';
 
 try {
     // Configurar contexto para timeout

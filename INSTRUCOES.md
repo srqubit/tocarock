@@ -9,7 +9,7 @@
 
 ### 2. Acessar o site
 - Abra seu navegador
-- Digite: `http://localhost/tocarock/`
+- Digite: `https://tocarock.com.br/`
 - **NÃO abra o arquivo index.php diretamente**
 
 ### 3. PWA (Progressive Web App)
@@ -33,21 +33,21 @@ O sistema funciona como um PWA completo:
 
 **Soluções:**
 1. **Verifique se o Apache está rodando** no XAMPP Control Panel
-2. **Acesse através do servidor web:** `http://localhost/tocarock/`
-3. **Teste o PHP:** `http://localhost/tocarock/teste-php.php`
-4. **Teste encoding:** `http://localhost/tocarock/teste-encoding.php`
-5. **Teste simples:** `http://localhost/tocarock/teste-simples.php`
-6. **Fix encoding:** `http://localhost/tocarock/fix-encoding.php`
-7. **Diagnóstico completo:** `http://localhost/tocarock/diagnostico.php`
+2. **Acesse através do servidor web:** `https://tocarock.com.br/`
+3. **Teste o PHP:** `https://tocarock.com.br/teste-php.php`
+4. **Teste encoding:** `https://tocarock.com.br/teste-encoding.php`
+5. **Teste simples:** `https://tocarock.com.br/teste-simples.php`
+6. **Fix encoding:** `https://tocarock.com.br/fix-encoding.php`
+7. **Diagnóstico completo:** `https://tocarock.com.br/diagnostico.php`
 
 ### 5. Problemas de Encoding UTF-8
 **Se aparecer caracteres estranhos como "Ã£", "Ã³":**
 
 **Soluções:**
 1. **Todos os arquivos PHP foram corrigidos** com encoding UTF-8
-2. **Teste o encoding:** `http://localhost/tocarock/teste-encoding.php`
-3. **Teste simples:** `http://localhost/tocarock/teste-simples.php`
-4. **Fix encoding:** `http://localhost/tocarock/fix-encoding.php`
+2. **Teste o encoding:** `https://tocarock.com.br/teste-encoding.php`
+3. **Teste simples:** `https://tocarock.com.br/teste-simples.php`
+4. **Fix encoding:** `https://tocarock.com.br/fix-encoding.php`
 5. **Verifique se o navegador está em UTF-8**
 
 ### 6. Configuração do Icecast
@@ -89,14 +89,14 @@ O sistema funciona como um PWA completo:
 ### 11. Troubleshooting
 
 **Erro: "Unexpected token '<', "<?php"**
-- ✅ Verifique se está acessando via `http://localhost/tocarock/`
+- ✅ Verifique se está acessando via `https://tocarock.com.br/`
 - ✅ Verifique se o Apache está rodando
-- ✅ Teste: `http://localhost/tocarock/teste-php.php`
+- ✅ Teste: `https://tocarock.com.br/teste-php.php`
 
 **Erro: Caracteres estranhos (Ã£, Ã³)**
-- ✅ Teste encoding: `http://localhost/tocarock/teste-encoding.php`
-- ✅ Teste simples: `http://localhost/tocarock/teste-simples.php`
-- ✅ Fix encoding: `http://localhost/tocarock/fix-encoding.php`
+- ✅ Teste encoding: `https://tocarock.com.br/teste-encoding.php`
+- ✅ Teste simples: `https://tocarock.com.br/teste-simples.php`
+- ✅ Fix encoding: `https://tocarock.com.br/fix-encoding.php`
 - ✅ Verifique se o navegador está em UTF-8
 - ✅ Todos os arquivos PHP foram corrigidos
 
@@ -106,14 +106,14 @@ O sistema funciona como um PWA completo:
 
 **Erro: "Não foi possível conectar ao Icecast"**
 - ✅ Verifique se o Icecast está rodando na porta 8000
-- ✅ Teste: `http://localhost:8000/status-json.xsl`
+- ✅ Teste: `https://stream.tocarock.com.br/status-json.xsl`
 
 **Logo não aparece**
 - ✅ Verifique se o arquivo `assets/logo.png` existe
 - ✅ Verifique se o caminho está correto
 
 **PWA não instala**
-- ✅ Verifique se está usando HTTPS ou localhost
+- ✅ Verifique se está usando HTTPS
 - ✅ Verifique se o manifest.json está acessível
 - ✅ Verifique se o service worker está registrado
 - ✅ No iOS, use Safari e "Adicionar à Tela Inicial"

@@ -13,24 +13,24 @@
   
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website">
-  <meta property="og:url" content="http://localhost/tocarock/">
+  <meta property="og:url" content="https://tocarock.com.br/">
   <meta property="og:title" content="Toca Rock - Rádio Online de Rock Clássico">
   <meta property="og:description" content="Ouça rock clássico dos anos 70, 80 e 90. 24h de rock pesado online.">
-  <meta property="og:image" content="http://localhost/tocarock/assets/logo.png">
+  <meta property="og:image" content="https://tocarock.com.br/assets/logo.png">
   
   <!-- Twitter -->
   <meta property="twitter:card" content="summary_large_image">
-  <meta property="twitter:url" content="http://localhost/tocarock/">
+  <meta property="twitter:url" content="https://tocarock.com.br/">
   <meta property="twitter:title" content="Toca Rock - Rádio Online de Rock Clássico">
   <meta property="twitter:description" content="Ouça rock clássico dos anos 70, 80 e 90. 24h de rock pesado online.">
-  <meta property="twitter:image" content="http://localhost/tocarock/assets/logo.png">
+  <meta property="twitter:image" content="https://tocarock.com.br/assets/logo.png">
   
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="assets/logo.png">
   <link rel="apple-touch-icon" href="assets/logo.png">
   
   <!-- Canonical URL -->
-  <link rel="canonical" href="http://localhost/tocarock/">
+  <link rel="canonical" href="https://tocarock.com.br/">
   
   <!-- PWA Meta Tags -->
   <link rel="manifest" href="manifest.json">
@@ -66,7 +66,7 @@
         <!-- As barras serão criadas via JavaScript -->
       </div>
       
-      <audio id="audioPlayer" src="http://localhost:8000/stream"></audio>
+      <audio id="audioPlayer" src="https://stream.tocarock.com.br/stream"></audio>
       
       <div class="track-info">
         <div class="track-title" id="track">Carregando música atual...</div>

@@ -102,7 +102,7 @@ cd toca-rock
 
 ### 5. Acesse o sistema
 ```
-http://localhost/tocarock/
+https://tocarock.com.br/
 ```
 
 ## ⚙️ Configuração
@@ -124,19 +124,19 @@ Configurações do PWA:
 #### `js/script.js`
 Configurações do player:
 ```javascript
-const streamUrl = 'http://localhost:8000/stream';
+const streamUrl = 'https://stream.tocarock.com.br/stream';
 const nowPlayingFile = 'C:\\RadioDJv2\\NowPlaying.txt';
 ```
 
 #### `api/status.php`
 Configurações do Icecast:
 ```php
-$icecastUrl = 'http://localhost:8000/status-json.xsl';
+$icecastUrl = 'https://stream.tocarock.com.br/status-json.xsl';
 ```
 
 ### Variáveis de Ambiente
-- **Stream URL**: `http://localhost:8000/stream`
-- **Icecast Status**: `http://localhost:8000/status-json.xsl`
+- **Stream URL**: `https://stream.tocarock.com.br/stream`
+- **Icecast Status**: `https://stream.tocarock.com.br/status-json.xsl`
 - **NowPlaying File**: `C:\RadioDJv2\NowPlaying.txt`
 
 ## 📱 Como Usar
@@ -144,19 +144,19 @@ $icecastUrl = 'http://localhost:8000/status-json.xsl';
 ### Instalação PWA
 
 #### Android/Chrome
-1. Acesse `http://localhost/tocarock/`
+1. Acesse `https://tocarock.com.br/`
 2. Aparecerá um banner de instalação
 3. Clique em "Instalar"
 4. O app será adicionado à tela inicial
 
 #### iOS/Safari
-1. Acesse `http://localhost/tocarock/` no Safari
+1. Acesse `https://tocarock.com.br/` no Safari
 2. Toque no botão "Compartilhar"
 3. Selecione "Adicionar à Tela Inicial"
 4. O app aparecerá como ícone nativo
 
 #### Desktop
-1. Acesse `http://localhost/tocarock/`
+1. Acesse `https://tocarock.com.br/`
 2. Clique no ícone de instalação na barra de endereços
 3. O app será instalado como aplicativo
 
@@ -175,14 +175,14 @@ $icecastUrl = 'http://localhost:8000/status-json.xsl';
 
 **Soluções**:
 1. Verifique se o Apache está rodando no XAMPP
-2. Acesse via `http://localhost/tocarock/` (não file://)
-3. Teste: `http://localhost/tocarock/teste-php.php`
+2. Acesse via `https://tocarock.com.br/` (não file://)
+3. Teste: `https://tocarock.com.br/teste-php.php`
 
 ### Erro: Caracteres estranhos (Ã£, Ã³)
 **Causa**: Problemas de encoding UTF-8.
 
 **Soluções**:
-1. Teste encoding: `http://localhost/tocarock/teste-encoding.php`
+1. Teste encoding: `https://tocarock.com.br/teste-encoding.php`
 2. Verifique se o navegador está em UTF-8
 3. Todos os arquivos PHP já foram corrigidos
 
@@ -201,12 +201,12 @@ echo "Música de teste" > C:\RadioDJv2\NowPlaying.txt
 
 **Soluções**:
 1. Verifique se o Icecast está rodando na porta 8000
-2. Teste: `http://localhost:8000/status-json.xsl`
+2. Teste: `https://stream.tocarock.com.br/status-json.xsl`
 3. Verifique as configurações do `icecast.xml`
 
 ### PWA não instala
 **Soluções**:
-1. Verifique se está usando HTTPS ou localhost
+1. Verifique se está usando HTTPS
 2. Verifique se o `manifest.json` está acessível
 3. Verifique se o service worker está registrado
 4. No iOS, use Safari e "Adicionar à Tela Inicial"

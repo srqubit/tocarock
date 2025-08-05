@@ -164,7 +164,7 @@ class PWAInstallManager {
   async registerServiceWorker() {
     if ('serviceWorker' in navigator) {
       try {
-        const registration = await navigator.serviceWorker.register('/tocarock/sw.js');
+        const registration = await navigator.serviceWorker.register('/sw.js');
         console.log('Service Worker registrado:', registration);
         
         // Verificar atualizações

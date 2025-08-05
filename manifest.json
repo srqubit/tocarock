@@ -2,12 +2,12 @@
   "name": "Toca Rock - Rádio Online",
   "short_name": "Toca Rock",
   "description": "Rádio online especializada em rock clássico dos anos 70, 80 e 90",
-  "start_url": "/tocarock/",
+  "start_url": "/",
   "display": "standalone",
   "background_color": "#0a0a0a",
   "theme_color": "#ff0000",
   "orientation": "portrait-primary",
-  "scope": "/tocarock/",
+  "scope": "/",
   "lang": "pt-BR",
   "categories": ["music", "entertainment"],
   "icons": [
@@ -59,7 +59,7 @@
       "name": "Tocar Rádio",
       "short_name": "Play",
       "description": "Iniciar reprodução da rádio",
-      "url": "/tocarock/?action=play",
+      "url": "/?action=play",
       "icons": [
         {
           "src": "assets/logo.png",
