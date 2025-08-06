@@ -1,9 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+         xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
+  
+  <!-- Página Principal -->
   <url>
     <loc>https://tocarock.com.br/</loc>
-    <lastmod>2025-08-05</lastmod>
+    <lastmod>2025-01-27T10:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://tocarock.com.br/assets/logo.png</image:loc>
+      <image:title>Toca Rock - Rádio Online de Rock Clássico</image:title>
+      <image:caption>Logo da Toca Rock - Rádio especializada em rock dos anos 70, 80 e 90</image:caption>
+    </image:image>
   </url>
+  
+  <!-- Página de API Status -->
+  <url>
+    <loc>https://tocarock.com.br/api/status.php</loc>
+    <lastmod>2025-01-27T10:00:00+00:00</lastmod>
+    <changefreq>hourly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <!-- Página de Now Playing -->
+  <url>
+    <loc>https://tocarock.com.br/api/nowplaying.php</loc>
+    <lastmod>2025-01-27T10:00:00+00:00</lastmod>
+    <changefreq>minutely</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
 </urlset> 

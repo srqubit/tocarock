@@ -79,7 +79,10 @@ function stopAudioBars() {
 function atualizarRelogio() {
   const agora = new Date();
   const data = agora.toLocaleDateString('pt-BR');
-  const hora = agora.toLocaleTimeString('pt-BR');
+  const hora = agora.toLocaleTimeString('pt-BR', { 
+    hour: '2-digit', 
+    minute: '2-digit' 
+  });
   relogio.innerHTML = `<i class="fas fa-clock"></i> ${data} - ${hora}`;
 }
 
@@ -113,6 +116,11 @@ async function lerMusicaAtual() {
   }
 }
 
+// Gerar número aleatório de ouvintes entre 201 e 276
+function gerarOuvintesAleatorios() {
+  return Math.floor(Math.random() * (276 - 201 + 1)) + 201;
+}
+
 // Atualizar status do Icecast
 async function atualizarStatus() {
   try {
@@ -131,21 +139,19 @@ async function atualizarStatus() {
       currentTrack = data.title;
     }
     
-    listeners.textContent = data.listeners || 0;
+    // Simular ouvintes aleatórios entre 201 e 276
+    const ouvintesSimulados = gerarOuvintesAleatorios();
+    listeners.textContent = ouvintesSimulados;
     
-    if (data.listeners > 0) {
-      status.textContent = 'Online';
-      status.style.color = '#00ff00';
-    } else {
-      status.textContent = 'Offline';
-      status.style.color = '#ff6666';
-    }
+    // Status sempre Online
+    status.textContent = 'Online';
+    status.style.color = '#00ff00';
     
   } catch (err) {
     console.error('Erro ao atualizar status:', err);
-    status.textContent = 'Erro';
-    status.style.color = '#ff6666';
-    listeners.textContent = '--';
+    status.textContent = 'Online';
+    status.style.color = '#00ff00';
+    listeners.textContent = gerarOuvintesAleatorios();
   }
 }
 
@@ -167,7 +173,7 @@ audio.addEventListener('play', () => {
   isPlaying = true;
   playBtn.classList.add('playing');
   playBtn.querySelector('i').className = 'fas fa-pause';
-  status.textContent = 'Reproduzindo';
+  status.textContent = 'Online';
   status.style.color = '#00ff00';
   
   // Iniciar animação das barras
@@ -179,8 +185,8 @@ audio.addEventListener('pause', () => {
   isPlaying = false;
   playBtn.classList.remove('playing');
   playBtn.querySelector('i').className = 'fas fa-play';
-  status.textContent = 'Pausado';
-  status.style.color = '#ffaa00';
+  status.textContent = 'Online';
+  status.style.color = '#00ff00';
   
   // Parar animação das barras
   stopAudioBars();
@@ -189,8 +195,8 @@ audio.addEventListener('pause', () => {
 audio.addEventListener('error', () => {
   console.error('Erro no áudio:', audio.error);
   track.textContent = 'Erro na conexão com o stream';
-  status.textContent = 'Erro';
-  status.style.color = '#ff6666';
+  status.textContent = 'Online';
+  status.style.color = '#00ff00';
   
   // Parar animação das barras
   stopAudioBars();
@@ -227,7 +233,7 @@ document.addEventListener('DOMContentLoaded', () => {
   
   // Atualizações periódicas
   setInterval(atualizarRelogio, 1000);
-  setInterval(atualizarStatus, 10000); // A cada 10 segundos
+  setInterval(atualizarStatus, 8000); // A cada 8 segundos (mudança mais frequente dos ouvintes)
   setInterval(lerMusicaAtual, 5000);   // A cada 5 segundos
   setInterval(addGlowEffect, 100);
   

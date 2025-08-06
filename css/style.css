@@ -260,8 +260,8 @@ body::before {
 .stat-value {
   font-size: 1.2rem;
   font-weight: 600;
-  color: #ff6666;
-  text-shadow: 0 0 5px rgba(255, 102, 102, 0.5);
+  color: #00ff00;
+  text-shadow: 0 0 5px rgba(0, 255, 0, 0.5);
 }
 
 .clock {
